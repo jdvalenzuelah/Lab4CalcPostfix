@@ -3,6 +3,7 @@
  * Metodos son solamente los necesarios parautilizar en un Stack
  * @author David Valenzuela 171001
  * @author Fernando Hengstenberg 17699
+ * @author Duane A. Bailey
  * @param <E> Implementation type
  */
 
