@@ -1,30 +1,28 @@
 /**
- * Implementacion de un Stack con lista simplemente encadenada
+ * Implementacion de un Stack con lista doblemente encadenada
  * @author David Valenzuela 171001
  * @author Fernando Hengstenberg 17699
  */
-public class StackSinglyLinkedList<E> extends AbstractStack<E> {
+public class StackDoublyLinkedList<E> extends AbstractStack<E> {
 
 	/**
 	 * Datos del stack
 	 */
-	protected SinglyLinkedList<E> data;
-	
-	
+	protected DoublyLinkedList<E> data;
 	
 	/**
 	 * Constructor de la clase
 	 */
-	public StackSinglyLinkedList() {
-		data = new SinglyLinkedList<E>();
+	public StackDoublyLinkedList() {
+		data = new DoublyLinkedList<E>();
 	}
-
+	
 	/* (non-Javadoc)
 	 * @see Stack#push(java.lang.Object)
 	 */
 	@Override
 	public void push(E item) {
-		data.addFirst(item);
+		this.data.addFirst(item);
 		
 	}
 
@@ -33,7 +31,7 @@ public class StackSinglyLinkedList<E> extends AbstractStack<E> {
 	 */
 	@Override
 	public E pop() {
-		return data.removeFirst();
+		return this.data.removeFirst();
 	}
 
 	/* (non-Javadoc)
@@ -41,7 +39,7 @@ public class StackSinglyLinkedList<E> extends AbstractStack<E> {
 	 */
 	@Override
 	public E peek() {
-		return data.getFirst();
+		return this.data.getFirst();
 	}
 
 	/* (non-Javadoc)
@@ -49,7 +47,7 @@ public class StackSinglyLinkedList<E> extends AbstractStack<E> {
 	 */
 	@Override
 	public boolean empty() {
-		return data.isEmpty();
+		return this.data.isEmpty();
 	}
 
 	/* (non-Javadoc)
@@ -57,7 +55,7 @@ public class StackSinglyLinkedList<E> extends AbstractStack<E> {
 	 */
 	@Override
 	public int size() {
-		return data.size();
+		return this.data.size();
 	}
 
 }
