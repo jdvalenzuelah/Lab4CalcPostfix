@@ -62,13 +62,10 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
 	 */
 	@Override
 	public E removeFirst() {
-		DoublyLinkedNode<E> temp = null;
-		if(this.isEmpty()) {
-			temp = this.head;
-			this.head = this.head.nextElement;
-			this.head.previousElement = null;
-			count--;
-		}
+		DoublyLinkedNode<E> temp = head;
+		this.head = head.next();
+		this.head.previousElement = null;
+		this.count--;
 		return temp.value();
 	}
 
